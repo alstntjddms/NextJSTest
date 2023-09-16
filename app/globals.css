@@ -16,15 +16,23 @@
   }
 }
 
-.html,
-body {
-    position: fixed;
+.html,body {
+    /* position: fixed; */
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    /* height: 100vh; */
+    height:auto;
+    overflow-y: scroll;
     touch-action: none;
     overscroll-behavior-y: none;
     background-color: aliceblue;
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+body::-webkit-scrollbar{
+  display:none;
 }
 /* 
 body {

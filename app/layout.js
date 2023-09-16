@@ -1,8 +1,11 @@
 "use client"
+import React from "react";
 import BottomNavBar from './framework/BottomNavBar'
 import TopBar from './framework/TopNavBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Provider } from 'react-redux'
+import store from "./store/store";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,9 +41,13 @@ export default function RootLayout({ children }) {
       {/* PWA관련 설정 추가 끝 */}
       
       <body className={inter.className}>
-          <TopBar />
-          {children}
-          <BottomNavBar />
+          <React.Fragment>
+            <Provider store={store}>
+              <TopBar />
+              {children}
+              <BottomNavBar />
+            </Provider>
+          </React.Fragment>
         </body>
     </html>
   )
