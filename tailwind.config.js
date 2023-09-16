@@ -17,6 +17,7 @@ module.exports = {
       },
       backgroundColor: {
         'yc-logo-color': '#01366C', // 'navy' 클래스를 '#000080' 색상으로 정의
+        'yc-backgroud-color': '#0B001A'
       },
     },
   },

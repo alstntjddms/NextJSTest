@@ -1,5 +1,5 @@
 export default function(){
     return(
-        <h4>4444</h4>
+        <h4>Page : test4</h4>
     )
 }

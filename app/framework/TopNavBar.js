@@ -14,13 +14,13 @@ function TopBar(){
     }
     
     return (
-        <nav className="bg-white text-yc-logo-color fixed p-4 top-0 left-0 right-0" style={{ padding: '8px', zIndex: '99'}}>
+        <nav className="bg-white text-yc-backgroud-color fixed p-4 top-0 left-0 right-0" style={{ padding: '8px', zIndex: '99'}}>
             <div className="container mx-auto flex justify-between items-center">
                 <div className="flex items-center space-x-4">
                     {/* 왼쪽에 이미지 */}
                     <img src="/images/logo1.png" alt="logo" className="w-20" />
                 </div>
-                <span>{currentPage}</span>
+                <h1><b>{currentPage}</b></h1>
                 <div className="flex items-center space-x-4 justify-end">
                     <div className="text-2xl text-yc-logo-color">
                     <Link href="/pages/test2" className={`text-2xl flex-1 flex items-center justify-center ${
