@@ -22,7 +22,8 @@ function BottomNavBar(){
                 <Link href="/pages/test1" className={`text-3xl flex-1 flex items-center justify-center ${
                         currentPage === 'home' ? 'text-yellow-500' : ''
                     }`}
-                    onClick={() => handleClick('setCuurentPage', 'home')}>
+                    onClick={() => handleClick('setCuurentPage', 'home')}
+                    >
                     <AiOutlineHome />
                     
                 </Link>

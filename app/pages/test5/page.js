@@ -1,9 +1,11 @@
 "use client"
-import {Button, NextUIProvider} from "@nextui-org/react";
+import {Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, NextUIProvider, useDisclosure} from "@nextui-org/react";
 
 import {User, Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
 
 export default function(){
+    const {isOpen, onOpen, onOpenChange} = useDisclosure();
+
     return(
         <NextUIProvider>
             <div className="test5 max-h-screen" style={{paddingBottom:"150px"}}>
@@ -27,7 +29,7 @@ export default function(){
                 <Card style={{margin:"3%", width:'94%'}} className="max-h-screen">
                     <CardBody>
                     <h4 className="font-bold text-large">개인정보</h4>
-                    <Card isPressable="true" radius="none" shadow="sm" fullWidth="true">
+                    <Card onPress={onOpen} isPressable="true" radius="none" shadow="sm" fullWidth="true">
                         <CardBody style={{padding:"10px"}}>
                         <p>내정보</p>
                         </CardBody>
@@ -66,6 +68,28 @@ export default function(){
                     </Card>
                     </CardBody>
                 </Card>
+                <Modal size="xs" placement="center" isOpen={isOpen} onOpenChange={onOpenChange}>
+                    <ModalContent>
+                        {(onClose) => (
+                        <>
+                            <ModalHeader className="flex flex-col gap-1">모달 테스트</ModalHeader>
+                            <ModalBody>
+                            <p> 
+                                현재 내정보는 볼 수 없습니다.
+                            </p>
+                            </ModalBody>
+                            <ModalFooter>
+                            <Button color="danger" variant="light" onPress={onClose}>
+                                닫기
+                            </Button>
+                            <Button color="primary" onPress={onClose}>
+                                확인
+                            </Button>
+                            </ModalFooter>
+                        </>
+                        )}
+                    </ModalContent>
+                </Modal>
             </div>
         </NextUIProvider>
     )
