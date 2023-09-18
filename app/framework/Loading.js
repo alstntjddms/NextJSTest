@@ -7,21 +7,17 @@ function Loading() {
   const LoadingDisplay = useSelector((state) => state.Loading);
 
   const overlayStyles = {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    backgroundColor: "rgba(0, 0, 0, 0.7)", // 반투명 배경색
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
     display: LoadingDisplay,
-    alignItems: "center",
-    justifyContent: "center",
-    zIndex: 9999, // 다른 요소 위에 나타나도록 설정
+    color: "white",
   };
 
   return (
-    <div style={overlayStyles}>
-      <CircularProgress label="Loading..." size="lg" />
+    <div
+      className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50"
+      style={overlayStyles}
+    >
+      <CircularProgress size="lg" label="Loading..." />
     </div>
   );
 }

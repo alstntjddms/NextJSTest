@@ -47,9 +47,9 @@ export default function RootLayout({ children }) {
           <Provider store={store}>
             <NextUIProvider>
               <TopBar />
-              <Loading />
               {children}
               <BottomNavBar />
+              <Loading />
             </NextUIProvider>
           </Provider>
         </React.Fragment>

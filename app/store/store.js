@@ -1,15 +1,13 @@
 import { legacy_createStore as createStore } from "@reduxjs/toolkit";
 
-function reducer(state, action) {
-  // state 정의
-  if (state === undefined) {
-    return {
-      체중: 100,
-      currentPage: "home",
-      Loading: "flex",
-    };
-  }
+// 초기 상태 정의
+const initialState = {
+  체중: 100,
+  currentPage: "home",
+  Loading: "flex",
+};
 
+function reducer(state = initialState, action) {
   const newState = { ...state };
   // state 변경
   switch (action.type) {

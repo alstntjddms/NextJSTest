@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AiOutlineHome,
   AiOutlineSearch,
@@ -16,14 +16,25 @@ function BottomNavBar() {
 
   const dispatch = useDispatch();
 
+  // url파싱해 currentPage세팅
+  useEffect(() => {
+    dispatch({ type: "setCuurentPage", data: settingCurrentPage() });
+  }, []);
+
   // 클릭 이벤트 핸들러
   const handleClick = (clickPage, pageName) => {
+    if (currentPage == pageName) {
+      return;
+    }
     dispatch({ type: clickPage, data: pageName });
     dispatch({ type: "openLoading" });
   };
 
   return (
-    <nav className="bg-yc-logo-color text-white p-4 fixed bottom-0 left-0 right-0 rounded-t-lg">
+    <nav
+      className="bg-yc-logo-color text-white p-4 fixed bottom-0 left-0 right-0 rounded-t-lg"
+      style={{ borderBottom: "none" }}
+    >
       <div
         className="container mx-auto flex justify-between items-center"
         style={{ marginBottom: "5%" }}
@@ -81,3 +92,21 @@ function BottomNavBar() {
 }
 
 export default BottomNavBar;
+
+function settingCurrentPage() {
+  if (typeof window !== "undefined") {
+    const currentURL = window.location.pathname;
+    return currentURL === "/pages/test1"
+      ? "home"
+      : currentURL === "/pages/test2"
+      ? "search"
+      : currentURL === "/pages/test3"
+      ? "time"
+      : currentURL === "/pages/test4"
+      ? "test"
+      : currentURL === "/pages/test5"
+      ? "info"
+      : "";
+  }
+  return "";
+}
