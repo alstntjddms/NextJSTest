@@ -52,6 +52,7 @@ export default function () {
             endContent={
               <AiOutlineSearch onClick={onOpen} className="text-3xl" />
             }
+            size="lg"
           />
         </CardBody>
       </Card>

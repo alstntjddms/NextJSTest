@@ -16,6 +16,9 @@
   }
 }
 
+*{
+  touch-action: pan-y;
+}
 .html,
 body {
   /* position: fixed; */
@@ -23,7 +26,7 @@ body {
   height: 100vh;
   /* height:auto; */
   overflow-y: scroll;
-  touch-action: none;
+  /* touch-action: none; */
   overscroll-behavior-y: none;
   background-color: aliceblue;
   padding-top: 50px;
@@ -36,9 +39,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.test5,
-.test1,
-.test2 {
+.test1,.test2,.test3,.test4,.test5 {
   position: fixed;
   width: 100%;
   height: 100vh;

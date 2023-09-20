@@ -9,5 +9,9 @@ export default function () {
   useEffect(() => {
     dispatch({ type: "closeLoading" });
   });
-  return <h4>Page : alert page</h4>;
+  return (
+    <div className="test4 max-h-screen" style={{ paddingBottom: "150px" }}>
+      <h4>Page : alert page</h4>
+    </div>
+  );
 }
