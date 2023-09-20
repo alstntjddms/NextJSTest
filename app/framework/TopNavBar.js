@@ -3,7 +3,7 @@ import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
-function TopBar() {
+function TopNavBar() {
   const currentPage = useSelector((state) => state.currentPage);
 
   const dispatch = useDispatch();
@@ -60,4 +60,4 @@ function TopBar() {
   );
 }
 
-export default TopBar;
+export default TopNavBar;

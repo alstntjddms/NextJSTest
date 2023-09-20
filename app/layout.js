@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import BottomNavBar from "./framework/BottomNavBar";
-import TopBar from "./framework/TopNavBar";
+import TopNavBar from "./framework/TopNavBar";
 import Loading from "./framework/Loading";
 import "./globals.css";
 import { Provider } from "react-redux";
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
         <React.Fragment>
           <Provider store={store}>
             <NextUIProvider>
-              <TopBar />
+              <TopNavBar />
               {children}
               <BottomNavBar />
               <Loading />

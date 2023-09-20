@@ -61,36 +61,38 @@ export default function () {
         <Card style={{ margin: "3%", width: "94%" }}>
           <CardBody className="flex items-start">
             <h4 className="font-bold text-large">검색 결과</h4>
-            <ListboxWrapper className="max-h-screen">
-              <Listbox aria-label="Actions" onAction={(key) => alert(key)}>
-                <ListboxItem key="전민수">
-                  <User
-                    name="전민수"
-                    description={
-                      <Link href="https://plater.kr" size="sm" isExternal>
-                        @minsuJeon
-                      </Link>
-                    }
-                    avatarProps={{
-                      src: "https://avatars.githubusercontent.com/u/79839332?v=4",
-                    }}
-                  />
-                </ListboxItem>
-                <ListboxItem key="김민수">
-                  <User
-                    name="김민수"
-                    description={
-                      <Link href="https://plater.kr" size="sm" isExternal>
-                        @minsuKim
-                      </Link>
-                    }
-                    avatarProps={{
-                      src: "https://avatars.githubusercontent.com/u/79839332?v=4",
-                    }}
-                  />
-                </ListboxItem>
-              </Listbox>
-            </ListboxWrapper>
+            <Listbox
+              className="p-1 gap-0 divide-y bg-content1 w-full overflow-visible shadow-small rounded-sm"
+              aria-label="Actions"
+              onAction={(key) => alert(key)}
+            >
+              <ListboxItem key="전민수" className="rounded-sm">
+                <User
+                  name="전민수"
+                  description={
+                    <Link href="https://plater.kr" size="sm" isExternal>
+                      @minsuJeon
+                    </Link>
+                  }
+                  avatarProps={{
+                    src: "https://avatars.githubusercontent.com/u/79839332?v=4",
+                  }}
+                />
+              </ListboxItem>
+              <ListboxItem key="김민수" className="rounded-sm">
+                <User
+                  name="김민수"
+                  description={
+                    <Link href="https://plater.kr" size="sm" isExternal>
+                      @minsuKim
+                    </Link>
+                  }
+                  avatarProps={{
+                    src: "https://cdn.aitimes.com/news/photo/202204/143854_149286_5624.png",
+                  }}
+                />
+              </ListboxItem>
+            </Listbox>
           </CardBody>
         </Card>
       )}
