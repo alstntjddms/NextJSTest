@@ -1,5 +1,5 @@
 "use client";
-import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineUser, AiOutlineBell } from "react-icons/ai";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -36,6 +36,17 @@ function TopNavBar() {
               onClick={() => handleClick("setCuurentPage", "search")}
             >
               <AiOutlineSearch />
+            </Link>
+          </div>
+          <div className="text-2xl text-yc-logo-color">
+            <Link
+              href="/pages/test4"
+              className={`text-2xl flex-1 flex items-center justify-center ${
+                currentPage === "alert" ? "text-yellow-500" : ""
+              }`}
+              onClick={() => handleClick("setCuurentPage", "alert")}
+            >
+              <AiOutlineBell />
             </Link>
           </div>
           <div className="text-2xl text-yc-logo-color">

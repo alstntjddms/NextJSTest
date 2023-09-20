@@ -5,7 +5,7 @@ import {
   AiOutlineHome,
   AiOutlineSearch,
   AiOutlineFieldTime,
-  AiOutlineHeart,
+  AiOutlineBell,
   AiOutlineUser,
 } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
@@ -70,11 +70,11 @@ function BottomNavBar() {
           <Link
             href="/pages/test4"
             className={`text-3xl flex-1 flex items-center justify-center ${
-              currentPage === "test" ? "text-yellow-500" : ""
+              currentPage === "alert" ? "text-yellow-500" : ""
             }`}
-            onClick={() => handleClick("setCuurentPage", "test")}
+            onClick={() => handleClick("setCuurentPage", "alert")}
           >
-            <AiOutlineHeart />
+            <AiOutlineBell />
           </Link>
           <Link
             href="/pages/test5"
@@ -103,7 +103,7 @@ function settingCurrentPage() {
       : currentURL === "/pages/test3"
       ? "time"
       : currentURL === "/pages/test4"
-      ? "test"
+      ? "alert"
       : currentURL === "/pages/test5"
       ? "info"
       : "";

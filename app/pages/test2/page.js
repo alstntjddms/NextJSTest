@@ -23,6 +23,7 @@ import { ListboxWrapper } from "@/app/components/ListboxWrapper";
 
 export default function () {
   const [searchResult, setSearchResult] = useState(false);
+  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
 
   const showSearchResult = () => {
     setSearchResult(true);
@@ -36,13 +37,10 @@ export default function () {
   });
 
   const clickEnter = (e) => {
-    console.log("aaa");
     if (e.keyCode == 13) {
-      onOpen(); // 작성한 댓글 post 요청하는 함수
+      onOpen();
     }
   };
-
-  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
 
   return (
     <div className="test2 max-h-screen" style={{ paddingBottom: "150px" }}>

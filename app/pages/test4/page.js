@@ -9,5 +9,5 @@ export default function () {
   useEffect(() => {
     dispatch({ type: "closeLoading" });
   });
-  return <h4>Page : test4</h4>;
+  return <h4>Page : alert page</h4>;
 }
