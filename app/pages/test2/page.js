@@ -19,7 +19,6 @@ import {
   ListboxItem,
 } from "@nextui-org/react";
 import { AiOutlineSearch } from "react-icons/ai";
-import { ListboxWrapper } from "@/app/components/ListboxWrapper";
 
 export default function () {
   const [searchResult, setSearchResult] = useState(false);
