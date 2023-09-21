@@ -42,7 +42,7 @@ export default function () {
           <small className="text-default-500">image test</small>
           <h4 className="font-bold text-large">LOGO</h4>
         </CardHeader>
-        <CardBody className="overflow-visible py-2 flex-row">
+        <CardBody className="flex-row justify-between  align-items-center py-2">
           <img
             alt="Card background"
             className="h-14 pr-2"
@@ -84,6 +84,8 @@ export default function () {
 
       <Card style={{ margin: "3%", width: "94%" }}>
         <CardBody>
+          <h4 className="font-bold text-large">Card List Test</h4>
+
           <Card isPressable="true" radius="none" shadow="sm" fullWidth="true">
             <CardBody>
               <p>테스트111</p>
