@@ -15,7 +15,7 @@ function TopNavBar() {
 
   return (
     <nav
-      className="bg-white text-yc-backgroud-color fixed p-4 top-0 left-0 right-0"
+      className="bg-white text-yc-backgroud-color fixed p-4 top-0 left-0 right-0 z-10"
       style={{ padding: "8px", zIndex: "99" }}
     >
       <div className="container mx-auto flex justify-between items-center">

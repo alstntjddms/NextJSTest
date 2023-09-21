@@ -32,7 +32,7 @@ function BottomNavBar() {
 
   return (
     <nav
-      className="bg-yc-logo-color text-white p-4 fixed bottom-0 left-0 right-0 rounded-t-lg"
+      className="bg-yc-logo-color text-white p-4 fixed bottom-0 left-0 right-0 rounded-t-lg z-10"
       style={{ borderBottom: "none" }}
     >
       <div
