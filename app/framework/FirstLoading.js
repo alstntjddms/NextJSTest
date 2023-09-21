@@ -10,7 +10,7 @@ function FirstLoading() {
     // Simulate an asynchronous task, like fetching data
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000); // Change the time as needed
+    }, 1100); // Change the time as needed
   }, []);
 
   // Declare overlayStyles here with initial values
