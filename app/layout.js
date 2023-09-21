@@ -4,6 +4,7 @@ import BottomNavBar from "./framework/BottomNavBar";
 import TopNavBar from "./framework/TopNavBar";
 import InstallPrompt from "./framework/InstallPrompt";
 import Loading from "./framework/Loading";
+import FirstLoading from "./framework/FirstLoading";
 import "./globals.css";
 import { Provider } from "react-redux";
 import store from "./store/store";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
       <body>
         <React.Fragment>
           <Provider store={store}>
+            <FirstLoading />
             <NextUIProvider>
               <TopNavBar />
               <InstallPrompt />

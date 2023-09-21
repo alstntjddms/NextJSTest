@@ -64,3 +64,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+/* FirstLoading이미지 서서히 나타남 */
+/* 애니메이션 효과 정의 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* 이미지에 적용할 클래스 정의 */
+.fade-in-image {
+  animation: fadeIn 0.5s ease-in-out; /* 애니메이션 지속 시간과 타이밍 함수 설정 */
+}
