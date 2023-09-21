@@ -16,26 +16,42 @@ const InstallPrompt = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
+  const handleBeforeInstallPrompt = (e) => {
+    e.preventDefault();
+    setDeferredPrompt(e);
+    setIsShown(true);
+  };
   useEffect(() => {
-    const isDeviceIOS =
-      /iPad|iPhone|iPod/.test(window.navigator.userAgent) && !window.MSStream;
-    setIsIOS(isDeviceIOS);
-
-    const handleBeforeInstallPrompt = (e) => {
-      e.preventDefault();
-      setDeferredPrompt(e);
-      setIsShown(true);
+    const initialize = async () => {
+      // PWA 설치 유무 확인
+      if ("serviceWorker" in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.register("/sw.js");
+          console.log("Service Worker registered with scope:", registration.scope);
+        } catch (err) {
+          console.log("Service Worker registration failed", err);
+        }
+      }
+      const isDeviceIOS =
+        /iPad|iPhone|iPod/.test(window.navigator.userAgent) && !window.MSStream;
+      setIsIOS(isDeviceIOS);
+      window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+      if(!isDeviceIOS){
+        onOpenChange();
+      }
+      
     };
 
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-    onOpenChange();
-    return () => {
-      window.removeEventListener(
-        "beforeinstallprompt",
-        handleBeforeInstallPrompt
-      );
-    };
-  }, []);
+  initialize();
+
+  return () => {
+    window.removeEventListener(
+      "beforeinstallprompt",
+      handleBeforeInstallPrompt
+    );
+  };
+}, []);
+
 
   // PWA추가
   const handleClick = async () => {
