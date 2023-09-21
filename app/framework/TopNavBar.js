@@ -21,7 +21,7 @@ function TopNavBar() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           {/* 왼쪽에 이미지 */}
-          <img src="/images/logo1.png" alt="logo" className="w-20" />
+          <img src="/images/logo1.png" alt="logo" className="h-10" />
         </div>
         <h1>
           <b>{currentPage}</b>

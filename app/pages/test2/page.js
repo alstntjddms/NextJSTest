@@ -23,13 +23,14 @@ import { AiOutlineSearch } from "react-icons/ai";
 export default function () {
   const [searchResult, setSearchResult] = useState(false);
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
+  const dispatch = useDispatch();
 
   const showSearchResult = () => {
+    dispatch({ type: "openLoading" });
     setSearchResult(true);
     onClose();
+    dispatch({ type: "closeLoading" });
   };
-
-  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch({ type: "closeLoading" });

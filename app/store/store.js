@@ -3,7 +3,7 @@ import { legacy_createStore as createStore } from "@reduxjs/toolkit";
 // 초기 상태 정의
 const initialState = {
   체중: 100,
-  currentPage: "home",
+  currentPage: "",
   Loading: "flex",
 };
 

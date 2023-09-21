@@ -42,12 +42,26 @@ export default function () {
           <small className="text-default-500">image test</small>
           <h4 className="font-bold text-large">LOGO</h4>
         </CardHeader>
-        <CardBody className="overflow-visible py-2">
-          <Image
+        <CardBody className="overflow-visible py-2 flex-row">
+          <img
             alt="Card background"
-            className="object-cover rounded-xl"
-            src="/images/logo1.png"
-            width={270}
+            className="h-14 pr-2"
+            src="/images/logo4.png"
+          />
+          <img
+            alt="Card background"
+            className="h-14 pr-2"
+            src="/images/logo5.png"
+          />
+          <img
+            alt="Card background"
+            className="h-14 pr-2"
+            src="/images/logo6.png"
+          />
+          <img
+            alt="Card background"
+            className="h-14 pr-2"
+            src="/images/logo7.png"
           />
         </CardBody>
       </Card>
