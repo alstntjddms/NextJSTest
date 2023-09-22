@@ -10,7 +10,16 @@ const withPlugins = require("next-compose-plugins");
 const withPWA = require("next-pwa");
 
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
+  redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/pages/test1",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = withPlugins(
