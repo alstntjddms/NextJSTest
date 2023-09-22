@@ -4,7 +4,7 @@
 // module.exports = nextConfig
 
 // const isProduction = process.env.NODE_ENV === "production";
-// 주석담
+
 /** @type {import('next').NextConfig} */
 const withPlugins = require("next-compose-plugins");
 const withPWA = require("next-pwa");
@@ -16,7 +16,7 @@ const nextConfig = {
       {
         source: "/",
         destination: "/pages/test1",
-        permanent: false,
+        permanent: true,
       },
     ];
   },
