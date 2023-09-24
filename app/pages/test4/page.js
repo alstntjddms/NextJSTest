@@ -24,7 +24,7 @@ export default function () {
 
         <Button color="primary" onClick={toggleFcmModal}>7초뒤 알림 실행</Button >
       {/* IOS 알림 추가 모달 */}
-      <FcmModal />
+        <FcmModal />
         </CardBody>
       </Card>
       
