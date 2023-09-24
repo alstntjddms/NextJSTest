@@ -142,12 +142,14 @@ const callFcm = (token) =>{
   };
 
   fetch(url, requestOptions)
-    .then(res =>{
+    .then((res) => {
       if (!res.ok) {
-        throw new Error(`HTTP error! Status: ${res.status}`);
+        console.log(res);
       }
     })
-    .then(data => {
-      console.log(data);
+    .then((data) => {
+      if (data) {
+        console.log(data);
+      }
     });
 }
