@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import FcmModal from "../../framework/FcmModal";
+import { Card, CardBody, Button } from "@nextui-org/react";
 
 export default function () {
   const dispatch = useDispatch();
@@ -17,10 +18,14 @@ export default function () {
 
   return (
     <div className="test4 max-h-screen" style={{ paddingBottom: "150px" }}>
-      <h4>Page : alert page</h4>
-      <button onClick={toggleFcmModal}>알림열기</button>
+      <Card style={{ margin: "3%", width: "94%" }}>
+        <CardBody className="flex items-start">
+        <Button color="primary" onClick={toggleFcmModal}>7초뒤 알림 실행</Button >
       {/* IOS 알림 추가 모달 */}
       <FcmModal />
+        </CardBody>
+      </Card>
+      
     </div>
   );
 }

@@ -100,11 +100,13 @@ const show = async () => {
       const messaging = getMessaging(app);
       let token = await getToken(messaging, {vapidKey: 'BEx5nXo-kwhTEAaRlSPv_kt7xZ8y1dT7qjKrAcEJlpmDUs5Wj1gU6NXJU_Fnc_qRdmiBz1EzqA92vKC7LmQ8rHE'});
       console.log(token);
-      alert(token);
+      // alert(token);
+      callFcm(token);
 
-    // 메세지가 수신되면 역시 콘솔에 출력합니다.
+    // 메세지가 수신되면 역시 콘솔에 출력합니다. 인앱알림
     onMessage(messaging, (payload) => {
       console.log("Message received. ", payload);
+      alert(payload.notification.title + "\n" + payload.notification.body);
     });
     return true;
   } else if(permission === 'denied') {
@@ -126,4 +128,26 @@ const checkIOS = () => {
     console.log(false);
     return false;
   }
+}
+
+const callFcm = (token) =>{
+  console.log("알림요청보냄");
+  const url = "https://plater.kr/api/notification";
+  const requestOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/plain", // 텍스트 데이터라면 Content-Type을 text/plain으로 설정
+    },
+    body: token // 원하는 텍스트 데이터를 본문에 지정
+  };
+
+  fetch(url, requestOptions)
+    .then(res =>{
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+    })
+    .then(data => {
+      console.log(data);
+    });
 }
