@@ -18,3 +18,9 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
+// 아이폰 푸시 알림
+self.addEventListener("push", (event) => {
+  const title = event.data.text();
+  event.waitUntil(self.ServiceWorkerRegistration.showNotification(title));
+});

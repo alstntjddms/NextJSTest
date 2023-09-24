@@ -33,7 +33,8 @@ const InstallPrompt = () => {
         }
       }
       const isDeviceIOS =
-        /iPad|iPhone|iPod/.test(window.navigator.userAgent) && !window.MSStream;
+        /iPad|iPhone|iPod/.test(window.navigator.userAgent);
+        console.log("isDeviceIOS1 = " + isDeviceIOS);
       setIsIOS(isDeviceIOS);
       window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
       if(!isDeviceIOS){

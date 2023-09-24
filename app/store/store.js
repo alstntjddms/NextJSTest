@@ -5,6 +5,7 @@ const initialState = {
   체중: 100,
   currentPage: "",
   Loading: "flex",
+  FcmModal: false
 };
 
 function reducer(state = initialState, action) {
@@ -20,6 +21,9 @@ function reducer(state = initialState, action) {
     case "closeLoading":
       newState.Loading = "none";
       break;
+    case "toggleFcmModal":
+      newState.FcmModal = !state.FcmModal;
+    break;
   }
   return newState;
 }
