@@ -121,6 +121,7 @@ const show = async () => {
       console.log("Message received. ", payload);
       alert(payload.notification.title + "\n" + payload.notification.body);
     });
+
     return true;
   } else if (permission === "denied") {
     alert("삭제 후 다시 알림신청 하세요.");
