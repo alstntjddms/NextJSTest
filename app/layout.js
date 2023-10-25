@@ -53,16 +53,15 @@ export default function RootLayout({ children }) {
           <Provider store={store}>
             <FirstLoading />
             <NextUIProvider>
-              <TopNavBar />
-              <InstallPrompt />
+              {/* <TopNavBar />
+              <InstallPrompt /> */}
               {children}
-              <BottomNavBar />
-              <Loading />
+              {/* <BottomNavBar /> */}
+              {/* <Loading /> */}
             </NextUIProvider>
           </Provider>
         </React.Fragment>
       </body>
-      
     </html>
   );
 }
@@ -82,19 +81,19 @@ export default function RootLayout({ children }) {
 
 //     const app = initializeApp(firebaseConfig);
 //     const messaging = getMessaging(app);
-    
+
 //     let token = await messaging.getToken({
 //       vapidKey: "BEx5nXo-kwhTEAaRlSPv_kt7xZ8y1dT7qjKrAcEJlpmDUs5Wj1gU6NXJU_Fnc_qRdmiBz1EzqA92vKC7LmQ8rHE",
 //     });
 //     // do something with the FCM token
-    
+
 //   } else {
 //     console.log("Notification permission denied");
 //     // Handle denied permission
 //   }
 // }
 
-// const fcmForAndroidAndChrome = () => {      
+// const fcmForAndroidAndChrome = () => {
 //   useEffect(() => {
 //     const firebaseConfig = {
 //       apiKey: "AIzaSyAcZ7o0xeLwfitSWFbmu1hYHaMd9JXFRko",

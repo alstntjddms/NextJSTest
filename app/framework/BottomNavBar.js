@@ -42,6 +42,7 @@ function BottomNavBar() {
         <div className="flex space-x-4 flex-1">
           <Link
             href="/pages/test1"
+            replace
             className={`text-3xl flex-1 flex items-center justify-center ${
               currentPage === "home" ? "text-yellow-500" : ""
             }`}
@@ -51,6 +52,7 @@ function BottomNavBar() {
           </Link>
           <Link
             href="/pages/test2"
+            replace
             className={`text-3xl flex-1 flex items-center justify-center ${
               currentPage === "search" ? "text-yellow-500" : ""
             }`}
@@ -60,6 +62,7 @@ function BottomNavBar() {
           </Link>
           <Link
             href="/pages/test3"
+            replace
             className={`text-3xl flex-1 flex items-center justify-center ${
               currentPage === "time" ? "text-yellow-500" : ""
             }`}
@@ -69,6 +72,7 @@ function BottomNavBar() {
           </Link>
           <Link
             href="/pages/test4"
+            replace
             className={`text-3xl flex-1 flex items-center justify-center ${
               currentPage === "alert" ? "text-yellow-500" : ""
             }`}
@@ -78,6 +82,7 @@ function BottomNavBar() {
           </Link>
           <Link
             href="/pages/test5"
+            replace
             className={`text-3xl flex-1 flex items-center justify-center ${
               currentPage === "info" ? "text-yellow-500" : ""
             }`}

@@ -19,9 +19,16 @@ import {
   ListboxItem,
 } from "@nextui-org/react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { checkJwtTokenCookie } from "../../framework/login.js";
 
 export default function () {
+  // 토큰체크
+  useEffect(() => {
+    checkJwtTokenCookie();
+  });
+
   const [searchResult, setSearchResult] = useState(false);
+  const [isInputFocused, setInputFocused] = useState(false);
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const dispatch = useDispatch();
 
@@ -43,7 +50,10 @@ export default function () {
   };
 
   return (
-    <div className="test2 max-h-screen" style={{ paddingBottom: "150px" }}>
+    <div
+      className={`test2 max-h-screen ${isInputFocused ? "focused" : ""}`}
+      style={{ paddingBottom: "150px" }}
+    >
       <Card style={{ margin: "3%", width: "94%" }}>
         <CardBody className="flex items-start">
           <Input
@@ -53,6 +63,8 @@ export default function () {
               <AiOutlineSearch onClick={onOpen} className="text-3xl" />
             }
             size="lg"
+            onFocus={() => setInputFocused(true)}
+            onBlur={() => setInputFocused(false)}
           />
         </CardBody>
       </Card>

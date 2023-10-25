@@ -31,6 +31,15 @@ function FcmModal() {
   };
 
   useEffect(() => {
+    const registration1 = async () => {
+      if ("pushManager" in (await navigator.serviceWorker.ready)) {
+        console.log("푸시지원됨");
+      } else {
+        alert("푸시지원안됨");
+        return;
+      }
+    };
+    registration1();
     const checkFirebaseServiceWorker = async () => {
       try {
         const registration = await navigator.serviceWorker.register(
@@ -146,8 +155,8 @@ const checkIOS = () => {
 
 const callFcm = (token) => {
   console.log("알림요청보냄");
-  // const url = "https://plater.kr/api/notification";
-  const url = "http://localhost:8081/api/kakao/notification";
+  const url = "https://plater.kr/api/notification";
+  // const url = "http://localhost:8081/api/kakao/notification";
   const requestOptions = {
     method: "POST",
     headers: {

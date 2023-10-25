@@ -79,3 +79,14 @@ body {
 .fade-in-image {
   animation: fadeIn 0.5s ease-in-out; /* 애니메이션 지속 시간과 타이밍 함수 설정 */
 }
+
+/* 서치input focus시 애니메이션*/
+/* 
+.test2 {
+  transition: all 0.3s ease;
+  transform: translate(0, 0);
+}
+
+.test2.focused {
+  transform: translate(0, 15%);
+} */

@@ -30,6 +30,7 @@ function TopNavBar() {
           <div className="text-2xl text-yc-logo-color">
             <Link
               href="/pages/test2"
+              replace
               className={`text-2xl flex-1 flex items-center justify-center ${
                 currentPage === "search" ? "text-yellow-500" : ""
               }`}
@@ -41,6 +42,7 @@ function TopNavBar() {
           <div className="text-2xl text-yc-logo-color">
             <Link
               href="/pages/test4"
+              replace
               className={`text-2xl flex-1 flex items-center justify-center ${
                 currentPage === "alert" ? "text-yellow-500" : ""
               }`}
@@ -52,6 +54,7 @@ function TopNavBar() {
           <div className="text-2xl text-yc-logo-color">
             <Link
               href="/pages/test5"
+              replace
               className={`text-2xl flex-1 flex items-center justify-center ${
                 currentPage === "info" ? "text-yellow-500" : ""
               }`}

@@ -2,16 +2,19 @@ import { legacy_createStore as createStore } from "@reduxjs/toolkit";
 
 // 초기 상태 정의
 const initialState = {
-  체중: 100,
+  profile: "",
   currentPage: "",
   Loading: "flex",
-  FcmModal: false
+  FcmModal: false,
 };
 
 function reducer(state = initialState, action) {
   const newState = { ...state };
   // state 변경
   switch (action.type) {
+    case "setProfile":
+      newState.profile = action.data;
+      break;
     case "setCuurentPage":
       newState.currentPage = action.data;
       break;
@@ -23,7 +26,7 @@ function reducer(state = initialState, action) {
       break;
     case "toggleFcmModal":
       newState.FcmModal = !state.FcmModal;
-    break;
+      break;
   }
   return newState;
 }
