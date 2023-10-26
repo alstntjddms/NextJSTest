@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import FcmModal from "../../framework/FcmModal";
 import { Card, CardBody, Button } from "@nextui-org/react";
-import { checkJwtTokenCookie } from "../../framework/login.js";
+import { checkJwtTokenCookie } from "../../framework/Login.js";
 
 export default function () {
   // 토큰체크

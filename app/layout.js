@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
       <body>
         <React.Fragment>
           <Provider store={store}>
-            <FirstLoading />
+            {/* <FirstLoading /> */}
             <NextUIProvider>
               {/* <TopNavBar />
               <InstallPrompt /> */}

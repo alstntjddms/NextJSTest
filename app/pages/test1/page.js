@@ -20,7 +20,7 @@ import {
   Image,
 } from "@nextui-org/react";
 import { useDispatch } from "react-redux";
-import { checkJwtTokenCookie } from "../../framework/login.js";
+import { checkJwtTokenCookie } from "../../framework/Login.js";
 
 export default function () {
   // 토큰체크

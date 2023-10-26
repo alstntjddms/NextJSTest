@@ -125,11 +125,12 @@ const show = async () => {
     // alert(token);
     callFcm(token);
 
-    // 메세지가 수신되면 역시 콘솔에 출력합니다. 인앱알림
+    // 메세지가 수신되면 역시 콘솔에 출력합니다.
     onMessage(messaging, (payload) => {
       console.log("Message received. ", payload);
       alert(payload.notification.title + "\n" + payload.notification.body);
     });
+    
 
     return true;
   } else if (permission === "denied") {
@@ -155,7 +156,8 @@ const checkIOS = () => {
 
 const callFcm = (token) => {
   console.log("알림요청보냄");
-  const url = "https://plater.kr/api/notification";
+  const url = "https://sso1.yulchon.com:8888/api/kace/notification";
+  // const url = "https://plater.kr/api/notification";
   // const url = "http://localhost:8081/api/kakao/notification";
   const requestOptions = {
     method: "POST",

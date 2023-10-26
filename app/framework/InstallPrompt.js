@@ -29,7 +29,10 @@ const InstallPrompt = () => {
       // PWA 설치 유무 확인
       if ("serviceWorker" in navigator) {
         try {
-          const registration = await navigator.serviceWorker.register("/sw.js");
+          // const registration = await navigator.serviceWorker.register("/sw.js");
+          const registration = await navigator.serviceWorker.register(
+            "/firebase-messaging-sw.js"
+          );
           console.log(
             "Service Worker registered with scope:",
             registration.scope

@@ -13,6 +13,11 @@ firebase.initializeApp({
 });
 const messaging = firebase.messaging();
 
+// onMessage(messaging, (payload) => {
+//   console.log("Message received11111. ", payload);
+//   alert(payload.notification.title + "\n" + payload.notification.body);
+// });
+
 // // 백그라운드 수신
 // messaging.onBackgroundMessage((payload) => {
 //   console.log(
@@ -27,4 +32,22 @@ const messaging = firebase.messaging();
 //   };
 
 //   self.registration.showNotification(notificationTitle, notificationOptions);
+// });
+
+// self.addEventListener("push", (event) => {
+//   console.log("[Service Worker] Push Received.", event.data.text());
+//   const { title, body } = event.data.json();
+//   event.waitUntil(self.registration.showNotification(title, { body }));https://sso1.yulchon.com/pages/test1
+// });
+
+// self.addEventListener("notificationclick", (event) => {
+//   console.log("[Service Worker] notificationclick");
+//   console.log(event);
+//   console.log(event.notification.data.link);
+//   clients.openWindow(event.fcmOptions.link);
+// });
+
+// self.addEventListener("install", () => {
+//   console.log("[Service Worker] install");
+//   self.skipWaiting();
 // });
