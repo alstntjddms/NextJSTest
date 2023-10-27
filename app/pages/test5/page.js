@@ -22,7 +22,7 @@ import {
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { checkJwtTokenCookie } from "../../framework/login.js";
+import { checkJwtTokenCookie } from "../../framework/Login.js";
 
 export default function () {
   // 토큰체크

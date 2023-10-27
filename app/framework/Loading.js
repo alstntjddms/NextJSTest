@@ -14,7 +14,7 @@ function Loading() {
 
   return (
     <div
-      className="fixed top-0 left-0 w-full h-full flex items-center justify-center"
+      className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-10"
       style={overlayStyles}
     >
       <CircularProgress size="lg" label="Loading..." />

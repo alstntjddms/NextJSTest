@@ -1,18 +1,21 @@
 "use client";
 import React from "react";
-import BottomNavBar from "./framework/BottomNavBar";
-import TopNavBar from "./framework/TopNavBar";
-import InstallPrompt from "./framework/InstallPrompt";
-import Loading from "./framework/Loading";
-import FirstLoading from "./framework/FirstLoading";
 import "./globals.css";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import { NextUIProvider } from "@nextui-org/react";
 
-export const metadata = {
-  title: "YC NextJS Test",
-  description: "NextJS TESTING...",
+// export const metadata = {
+//   title: "YC NextJS Test",
+//   description: "NextJS TESTING...",
+// };
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minumunScale: 1,
+  maximumScale: 1,
+  // userScalable: "no",
 };
 
 export default function RootLayout({ children }) {
@@ -20,13 +23,14 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <head>
+        <meta name="title" content="YC NextJS Test"></meta>
+        <meta name="description" content="NextJS TESTING..."></meta>
         {/* PWA관련 설정 추가 시작*/}
-        <meta charSet="utf-8" />
         <meta name="HandheldFriendly" content="true" />
-        <meta
+        {/* <meta
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
-        />
+        /> */}
         <link rel="manifest" href="/manifest.json" />
         <link
           href="../images/favicons/favicon-16x16.png"

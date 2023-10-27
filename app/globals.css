@@ -21,21 +21,16 @@
 }
 .html,
 body {
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   height: 100vh;
   /* height:auto; */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   /* touch-action: none; */
   overscroll-behavior-y: none;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   padding-top: 50px;
   padding-bottom: 100px;
-  -ms-overflow-style: none; /* 인터넷 익스플로러 */
-  scrollbar-width: none; /* 파이어폭스 */
-}
-body::-webkit-scrollbar {
-  display: none;
 }
 
 .test1,
@@ -43,16 +38,13 @@ body::-webkit-scrollbar {
 .test3,
 .test4,
 .test5 {
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
-  touch-action: none;
+  /* touch-action: none; */
   overscroll-behavior-y: none;
   background-color: aliceblue;
-
-  -ms-overflow-style: none; /* 인터넷 익스플로러 */
-  scrollbar-width: none; /* 파이어폭스 */
 }
 /* 
 body {

@@ -19,7 +19,7 @@ import {
   ListboxItem,
 } from "@nextui-org/react";
 import { AiOutlineSearch } from "react-icons/ai";
-import { checkJwtTokenCookie } from "../../framework/login.js";
+import { checkJwtTokenCookie } from "../../framework/Login.js";
 
 export default function () {
   // 토큰체크

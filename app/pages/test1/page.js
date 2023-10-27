@@ -7,20 +7,13 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
-  NextUIProvider,
   useDisclosure,
 } from "@nextui-org/react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Divider,
-  Link,
-  Image,
-} from "@nextui-org/react";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
+import Carousel from "react-material-ui-carousel";
 import { useDispatch } from "react-redux";
 import { checkJwtTokenCookie } from "../../framework/Login.js";
+import { Paper } from "@mui/material";
 
 export default function () {
   // 토큰체크
@@ -37,6 +30,60 @@ export default function () {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
     <div className="test1 max-h-screen" style={{ paddingBottom: "150px" }}>
+      <Card style={{ margin: "3%", width: "94%" }}>
+        <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+          <h4 className="font-bold text-large">LOGO</h4>
+        </CardHeader>
+        <CardBody>
+          <Carousel
+            animation="slide"
+            height="120px"
+            navButtonsAlwaysInvisible={true}
+            // indicators={false}
+          >
+            <Paper
+              elevation={0}
+              className="h-full flex items-center justify-center"
+            >
+              <img
+                alt="Card background"
+                src="/images/logo4.png"
+                className="h-full"
+              />
+            </Paper>
+            <Paper
+              elevation={0}
+              className="h-full flex items-center justify-center"
+            >
+              <img
+                alt="Card background"
+                className="h-full"
+                src="/images/logo5.png"
+              />
+            </Paper>
+            <Paper
+              elevation={0}
+              className="h-full flex items-center justify-center"
+            >
+              <img
+                alt="Card background"
+                className="h-full"
+                src="/images/logo6.png"
+              />
+            </Paper>
+            <Paper
+              elevation={0}
+              className="h-full flex items-center justify-center"
+            >
+              <img
+                alt="Card background"
+                className="h-full"
+                src="/images/logo7.png"
+              />
+            </Paper>
+          </Carousel>
+        </CardBody>
+      </Card>
       <Card
         onPress={onOpen}
         className="py-4 max-h-screen"
@@ -45,32 +92,12 @@ export default function () {
       >
         <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
           <p className="text-tiny uppercase font-bold">Yulchon</p>
-          <small className="text-default-500">image test</small>
-          <h4 className="font-bold text-large">LOGO</h4>
+          <small className="text-default-500">click test</small>
+          <h4 className="font-bold text-large">Click Teset</h4>
         </CardHeader>
-        <CardBody className="flex-row justify-between  align-items-center py-2">
-          <img
-            alt="Card background"
-            className="h-14 pr-2"
-            src="/images/logo4.png"
-          />
-          <img
-            alt="Card background"
-            className="h-14 pr-2"
-            src="/images/logo5.png"
-          />
-          <img
-            alt="Card background"
-            className="h-14 pr-2"
-            src="/images/logo6.png"
-          />
-          <img
-            alt="Card background"
-            className="h-14 pr-2"
-            src="/images/logo7.png"
-          />
-        </CardBody>
+        <CardBody className="flex-row justify-between  align-items-center py-2"></CardBody>
       </Card>
+
       <Card style={{ margin: "3%", width: "94%" }}>
         <CardBody>
           <h4 className="font-bold text-large">Card Test</h4>
