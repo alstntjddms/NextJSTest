@@ -69,7 +69,7 @@ body {
 }
 /* 이미지에 적용할 클래스 정의 */
 .fade-in-image {
-  animation: fadeIn 0.5s ease-in-out; /* 애니메이션 지속 시간과 타이밍 함수 설정 */
+  animation: fadeIn 1s ease-in-out; /* 애니메이션 지속 시간과 타이밍 함수 설정 */
 }
 
 /* 서치input focus시 애니메이션*/
